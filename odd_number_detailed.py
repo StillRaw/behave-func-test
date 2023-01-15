@@ -36,7 +36,9 @@ def odd_numbers(num1,num2):
         num1,num2 = num2,num1
     elif num2 == num1:
         if num1 % 2 == 0:
-            return print("No odd numbers found. Because, values are same and these are even number.")
+            odd_number_list=["No value found in given interval."]
+            print("No odd numbers found. Because, values are same and these are even number.")
+            return odd_number_list
     
     # To make clear float numbers by the terms of its sign(negative or positive).
     if num1 >= 0 and num2>= 0:
@@ -56,8 +58,7 @@ def odd_numbers(num1,num2):
     odd_number_list.sort()
 
     print(odd_number_list)
-    if odd_number_list is [] or None:
-        return ["No value found in given interval."]
+    
     return odd_number_list
 
 # if __name__=='__main__':

@@ -4,13 +4,13 @@ import json
 
 @given('Function runs')
 def step_impl(context):
-    print (u'STEP: Given Function runs')
+    print ('STEP: Given Function runs')
 
-@when(u'I input "{num1}" and "{num2}" to function')
+@when('I input "{num1}" and "{num2}" to function')
 def step_impl(context,num1,num2):
     context.result = odd_numbers(num1,num2)
 
-@then(u'I get result a {a_list}')
+@then('I get result a {a_list}')
 def step_impl(context,a_list):
     context.a_list = json.loads(a_list)
     assert context.result == context.a_list ,f'{context.result} is not {context.a_list}'
