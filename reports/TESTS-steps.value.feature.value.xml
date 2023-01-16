@@ -1,0 +1,110 @@
+<testsuite name="steps.value.feature.value.Test values whether they are numeric or not." tests="6" errors="0" failures="0" skipped="0" time="0.007017" timestamp="2023-01-16T23:45:41.631029" hostname="MSI"><testcase classname="steps.value.feature.value.Test values whether they are numeric or not." name="val1 is not integer or float." status="passed" time="0.001998"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: val1 is not integer or float.
+    Given Function runss ... passed in 0.001s
+    When I input string "a" and numeric "10" to function ... passed in 0.001s
+    Then I get result cautious "Values must be numeric!" ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+STEP: Given Function runs
+STEP: When I input a and 10 to function
+STEP: Then I get result Values must be numeric!
+
+]]>
+</system-out><system-err>
+<![CDATA[
+Captured stderr:
+features\steps\steps val.py:16: ContextMaskWarning: user code is masking context attribute 'text' originally set by behave
+  context.text =warning
+
+]]>
+</system-err></testcase><testcase classname="steps.value.feature.value.Test values whether they are numeric or not." name="val2 is not integer or float." status="passed" time="0.002026"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: val2 is not integer or float.
+    Given Function runss ... passed in 0.000s
+    When I input string "10" and numeric "a" to function ... passed in 0.001s
+    Then I get result cautious "Values must be numeric!" ... passed in 0.001s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+STEP: Given Function runs
+STEP: When I input 10 and a to function
+STEP: Then I get result Values must be numeric!
+
+]]>
+</system-out></testcase><testcase classname="steps.value.feature.value.Test values whether they are numeric or not." name="val1 is whitespace." status="passed" time="0.001"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: val1 is whitespace.
+    Given Function runss ... passed in 0.001s
+    When I input string " " and numeric "10" to function ... passed in 0.000s
+    Then I get result cautious "Values must be numeric!" ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+STEP: Given Function runs
+STEP: When I input   and 10 to function
+STEP: Then I get result Values must be numeric!
+
+]]>
+</system-out></testcase><testcase classname="steps.value.feature.value.Test values whether they are numeric or not." name="val2 is whitespace." status="passed" time="0.0"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: val2 is whitespace.
+    Given Function runss ... passed in 0.000s
+    When I input string "10" and numeric " " to function ... passed in 0.000s
+    Then I get result cautious "Values must be numeric!" ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+STEP: Given Function runs
+STEP: When I input 10 and   to function
+STEP: Then I get result Values must be numeric!
+
+]]>
+</system-out></testcase><testcase classname="steps.value.feature.value.Test values whether they are numeric or not." name="val1 is null." status="passed" time="0.001992"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: val1 is null.
+    Given Function runss ... passed in 0.001s
+    When I input string "None" and numeric "10" to function ... passed in 0.001s
+    Then I get result cautious "Values must be numeric!" ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+STEP: Given Function runs
+STEP: When I input None and 10 to function
+STEP: Then I get result Values must be numeric!
+
+]]>
+</system-out></testcase><testcase classname="steps.value.feature.value.Test values whether they are numeric or not." name="val2 is null." status="passed" time="0.0"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: val2 is null.
+    Given Function runss ... passed in 0.000s
+    When I input string "10" and numeric "None" to function ... passed in 0.000s
+    Then I get result cautious "Values must be numeric!" ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+STEP: Given Function runs
+STEP: When I input 10 and None to function
+STEP: Then I get result Values must be numeric!
+
+]]>
+</system-out></testcase></testsuite>
