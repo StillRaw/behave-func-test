@@ -7,26 +7,29 @@ def isfloat(num):
     except ValueError:
         return False
 
-def odd_numbers(num1,num2):
+def input_numbers():
     # Entering values by keyboard
     num1_numeric=False
     num2_numeric=False
 
     # Check values are float or other type.
-    # num1 = input("Enter the first value:")
-    # while num1_numeric==False:
-    #     if not isfloat(num1):
-    #         num1 = input("First value must be numeric value:")
-    #     else:
-    #         num1_numeric=True
+    num1 = input("Enter the first value:")
+    while num1_numeric==False:
+        if not isfloat(num1):
+            num1 = input("First value must be numeric value:")
+        else:
+            num1_numeric=True
 
-    # num2 = input("Enter the second value:")
-    # while num2_numeric==False:
-    #     if not isfloat(num2):
-    #         num2 = input("Second value must be numeric value:")
-    #     else:
-    #         num2_numeric=True
+    num2 = input("Enter the second value:")
+    while num2_numeric==False:
+        if not isfloat(num2):
+            num2 = input("Second value must be numeric value:")
+        else:
+            num2_numeric=True
+    return num1,num2
 
+def odd_numbers(num1,num2):
+    
     # Transform string input to float number.
     num1=float(num1)
     num2=float(num2)
@@ -61,5 +64,6 @@ def odd_numbers(num1,num2):
     
     return odd_number_list
 
-# if __name__=='__main__':
-#     odd_numbers(-1.2,-10.5)
+if __name__=='__main__':
+    num1,num2=input_numbers()
+    odd_numbers(num1,num2)
